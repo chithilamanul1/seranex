@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seranex Digital Lanka - Hosting</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+
+        .glassy-effect {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cta-button {
+            @apply px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .secondary-button {
+            @apply px-6 py-2 border border-white text-white font-medium rounded-full hover:bg-white hover:text-black transition-all duration-300 ease-in-out;
+        }
+
+        /* Mobile menu specific styles */
+        .mobile-menu-container {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-out;
+        }
+        .mobile-menu-container.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glassy-effect p-4 shadow-lg">
+        <nav class="container mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <!-- Seranex Digital Lanka Logo Placeholder -->
+                <span class="text-2xl font-bold text-white">Seranex.</span>
+                <span class="text-xl font-thin text-white">Digital Lanka</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="index.html" class="text-white hover:text-gray-300 transition-colors duration-300">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-white hover:text-gray-300 transition-colors duration-300 flex items-center">
+                        Services <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute left-1/2 -translate-x-1/2 mt-3 w-48 glassy-effect rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 origin-top">
+                        <ul class="py-2">
+                            <li><a href="web-design.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">Web Design</a></li>
+                            <li><a href="mobile-app.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">Mobile App Design</a></li>
+                            <li><a href="web-app-design.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">Web App Design</a></li>
+                            <li><a href="graphic-design.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">Graphic Design</a></li>
+                            <li><a href="hosting.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">Hosting</a></li>
+                            <li><a href="v2ray.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">V2Ray / Proxy Services</a></li>
+                            <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-white hover:text-black rounded-md transition-colors duration-200">And More...</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="text-white hover:text-gray-300 transition-colors duration-300">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-75 z-40 hidden" onclick="toggleMobileMenu()"></div>
+
+        <!-- Mobile Menu Sidebar -->
+        <div id="mobile-menu" class="mobile-menu-container fixed top-0 right-0 h-full w-64 bg-black p-6 z-50 shadow-lg md:hidden">
+            <div class="flex justify-end mb-8">
+                <button id="close-mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <ul class="flex flex-col space-y-4">
+                <li><a href="index.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Home</a></li>
+                <li><a href="web-design.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Web Design</a></li>
+                <li><a href="mobile-app.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Mobile App Design</a></li>
+                <li><a href="web-app-design.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Web App Design</a></li>
+                <li><a href="graphic-design.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Graphic Design</a></li>
+                <li><a href="hosting.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Hosting</a></li>
+                <li><a href="v2ray.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">V2Ray / Proxy Services</a></li>
+                <li><a href="contact.html" class="block text-white text-lg hover:text-gray-300 transition-colors duration-300 py-2">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="container mx-auto px-6 py-12 text-center animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Secure & Reliable Hosting</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Power your website with our robust and secure hosting solutions, ensuring maximum uptime and lightning-fast performance.
+            </p>
+        </section>
+
+        <!-- Why Host with Seranex? -->
+        <section class="py-16 px-6 bg-black">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in-up">Why Host with Seranex?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center animate-fade-in-up">
+                        <i class="fas fa-rocket text-5xl text-white mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4">Blazing Fast Speed</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Our optimized servers and infrastructure ensure your website loads at incredible speeds,
+                            providing an excellent user experience and better SEO rankings.
+                        </p>
+                    </div>
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center animate-fade-in-up">
+                        <i class="fas fa-shield-alt text-5xl text-white mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4">Ironclad Security</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            With advanced security measures including firewalls, DDoS protection, and regular backups,
+                            your data is safe and protected against threats.
+                        </p>
+                    </div>
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center animate-fade-in-up">
+                        <i class="fas fa-headset text-5xl text-white mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4">24/7 Expert Support</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Our dedicated support team is always ready to assist you with any hosting-related queries
+                            or issues, ensuring peace of mind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price Table -->
+        <section class="py-16 px-6 bg-black">
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-fade-in-up">Hosting Plans</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Starter Plan -->
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center flex flex-col justify-between animate-fade-in-up">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-white">Starter</h3>
+                            <p class="text-5xl font-extrabold text-white mb-6">Rs. 1500<span class="text-xl font-normal text-gray-400"> / year</span></p>
+                            <ul class="text-gray-300 space-y-3 mb-8 text-left mx-auto max-w-[200px]">
+                                <li class="flex items-center"><i class="fas fa-hdd text-green-400 mr-2"></i> 5GB Disk Space</li>
+                                <li class="flex items-center"><i class="fas fa-upload text-green-400 mr-2"></i> 50GB Bandwidth</li>
+                                <li class="flex items-center"><i class="fas fa-envelope text-green-400 mr-2"></i> 5 Email Accounts</li>
+                                <li class="flex items-center"><i class="fas fa-headset text-green-400 mr-2"></i> Standard Support</li>
+                                <li class="flex items-center text-gray-500"><i class="fas fa-times-circle mr-2"></i> Free SSL</li>
+                                <li class="flex items-center text-gray-500"><i class="fas fa-times-circle mr-2"></i> Daily Backups</li>
+                            </ul>
+                        </div>
+                        <a href="https://example.com/payhere-starter" target="_blank" class="cta-button mt-6">Pay Now (Starter)</a>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center flex flex-col justify-between border-2 border-white animate-fade-in-up">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-white">Pro</h3>
+                            <p class="text-5xl font-extrabold text-white mb-6">Rs. 4000<span class="text-xl font-normal text-gray-400"> / year</span></p>
+                            <ul class="text-gray-300 space-y-3 mb-8 text-left mx-auto max-w-[200px]">
+                                <li class="flex items-center"><i class="fas fa-hdd text-green-400 mr-2"></i> 20GB Disk Space</li>
+                                <li class="flex items-center"><i class="fas fa-upload text-green-400 mr-2"></i> 200GB Bandwidth</li>
+                                <li class="flex items-center"><i class="fas fa-envelope text-green-400 mr-2"></i> Unlimited Email Accounts</li>
+                                <li class="flex items-center"><i class="fas fa-headset text-green-400 mr-2"></i> Priority Support</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Free SSL Certificate</li>
+                                <li class="flex items-center text-gray-500"><i class="fas fa-times-circle mr-2"></i> Daily Backups</li>
+                            </ul>
+                        </div>
+                        <a href="https://example.com/payhere-pro" target="_blank" class="cta-button mt-6">Pay Now (Pro)</a>
+                    </div>
+
+                    <!-- Ultimate Plan -->
+                    <div class="glassy-effect rounded-xl p-8 shadow-xl text-center flex flex-col justify-between animate-fade-in-up">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-white">Ultimate</h3>
+                            <p class="text-5xl font-extrabold text-white mb-6">Rs. 7500<span class="text-xl font-normal text-gray-400"> / year</span></p>
+                            <ul class="text-gray-300 space-y-3 mb-8 text-left mx-auto max-w-[200px]">
+                                <li class="flex items-center"><i class="fas fa-hdd text-green-400 mr-2"></i> Unlimited Disk Space</li>
+                                <li class="flex items-center"><i class="fas fa-upload text-green-400 mr-2"></i> Unlimited Bandwidth</li>
+                                <li class="flex items-center"><i class="fas fa-envelope text-green-400 mr-2"></i> Unlimited Email Accounts</li>
+                                <li class="flex items-center"><i class="fas fa-headset text-green-400 mr-2"></i> 24/7 Dedicated Support</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Free SSL Certificate</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Daily Automated Backups</li>
+                            </ul>
+                        </div>
+                        <a href="https://example.com/payhere-ultimate" target="_blank" class="cta-button mt-6">Pay Now (Ultimate)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 px-6 text-center animate-fade-in-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Choose the perfect hosting plan for your needs or contact us for a custom solution.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="contact.html" class="secondary-button">Contact Us</a>
+                <a href="hosting.html" class="cta-button">Get Hosting Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-10 px-6 text-center">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-between text-gray-400">
+            <!-- Contact Info -->
+            <div class="text-center md:text-left">
+                <h4 class="text-lg font-semibold text-white mb-2">Contact Us</h4>
+                <p>Phone: +94 72 8382638</p>
+                <p>Email: <a href="mailto:hello@seranexdigital.com" class="hover:text-white transition-colors duration-300">hello@seranexdigital.com</a></p>
+                <p>Location: Sri Lanka</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="flex justify-center md:justify-center space-x-6 text-2xl">
+                <a href="#" class="hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center md:text-right">
+                <p>&copy; 2023 Seranex Digital Lanka. All rights reserved.</p>
+                <p class="mt-2">Made in Sri Lanka with <span class="text-red-500">❤️</span> by Seranex</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-top button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg hidden transition-all duration-300 hover:scale-110">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('open');
+                mobileMenuOverlay.classList.toggle('hidden');
+            }
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            }
+            if (closeMobileMenuButton) {
+                closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+            }
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
+
+            // Scroll-to-top button functionality
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.remove('hidden');
+                } else {
+                    scrollToTopBtn.classList.add('hidden');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Animate on Scroll (Intersection Observer)
+            const animateElements = document.querySelectorAll('.animate-fade-in-up');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
