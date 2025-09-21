@@ -30,7 +30,7 @@ const FuturisticNavigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Futuristic Logo */}
+          {/* SERANEX Logo */}
           <div className="flex items-center space-x-3 group">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:rotate-180 transition-transform duration-500">
@@ -40,7 +40,7 @@ const FuturisticNavigation = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent tracking-wider">
-                NEXCODE
+                SERANEX
               </h1>
               <div className="h-0.5 bg-gradient-to-r from-cyan-400 to-transparent rounded-full group-hover:from-cyan-400 group-hover:to-purple-600 transition-all duration-500"></div>
             </div>

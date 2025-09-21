@@ -128,9 +128,11 @@ const FuturisticHero = () => {
 
         {/* Main Heading */}
         <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-          <span className="block text-white">FUTURE</span>
-          <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
-            CODE
+          <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            SERANEX
+          </span>
+          <span className="block text-white text-4xl md:text-5xl mt-4">
+            Digital Excellence
           </span>
         </h1>
 
@@ -164,7 +166,7 @@ const FuturisticHero = () => {
 
         {/* Description */}
         <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Transforming ideas into cutting-edge digital solutions. We specialize in web development, 
+          At SERANEX, we transform ideas into cutting-edge digital solutions. We specialize in web development, 
           graphic design, and digital marketing that pushes the boundaries of innovation.
         </p>
 
