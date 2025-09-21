@@ -1,27 +1,17 @@
 import React from "react";
 import "./App.css";
-import Navigation from "./components/Navigation";
-import HeroSection from "./components/HeroSection";
-import ServicesSection from "./components/ServicesSection";
-import WhyChooseSection from "./components/WhyChooseSection";
-import ProcessSection from "./components/ProcessSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import ProjectsSection from "./components/ProjectsSection";
-import CTASection from "./components/CTASection";
-import Footer from "./components/Footer";
+import FuturisticNavigation from "./components/FuturisticNavigation";
+import FuturisticHero from "./components/FuturisticHero";
+import FuturisticServices from "./components/FuturisticServices";
+import TechStack from "./components/TechStack";
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <ProcessSection />
-      <TestimonialsSection />
-      <ProjectsSection />
-      <CTASection />
-      <Footer />
+      <FuturisticNavigation />
+      <FuturisticHero />
+      <FuturisticServices />
+      <TechStack />
     </div>
   );
 }
