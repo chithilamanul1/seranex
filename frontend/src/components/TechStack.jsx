@@ -4,26 +4,26 @@ import { Cpu, Zap } from 'lucide-react';
 const TechStack = () => {
   const technologies = [
     {
-      category: "Frontend",
-      techs: ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind"],
+      category: "Website Tech",
+      techs: ["React", "Next.js", "Vue.js", "HTML/CSS", "JavaScript"],
       color: "from-cyan-400 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10"
     },
     {
-      category: "Backend", 
-      techs: ["Node.js", "Python", "Django", "FastAPI", "MongoDB"],
+      category: "Server Tech", 
+      techs: ["Node.js", "Python", "PHP", "MySQL", "MongoDB"],
       color: "from-green-400 to-emerald-500",
       bgColor: "from-green-500/10 to-emerald-500/10"
     },
     {
-      category: "Cloud",
-      techs: ["AWS", "Docker", "Kubernetes", "Redis", "PostgreSQL"],
+      category: "Cloud Services",
+      techs: ["Amazon AWS", "Google Cloud", "Microsoft Azure", "Digital Ocean", "Cloudflare"],
       color: "from-purple-400 to-pink-500",
       bgColor: "from-purple-500/10 to-pink-500/10"
     },
     {
-      category: "Design",
-      techs: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Blender"],
+      category: "Design Tools",
+      techs: ["Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva"],
       color: "from-orange-400 to-red-500",
       bgColor: "from-orange-500/10 to-red-500/10"
     }
@@ -42,16 +42,16 @@ const TechStack = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/20 mb-6 backdrop-blur-sm">
             <Cpu className="h-4 w-4 text-purple-400 mr-2 animate-pulse" />
-            <span className="text-sm text-purple-300 font-medium">Technology Stack</span>
+            <span className="text-sm text-purple-300 font-medium">Tools We Use</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Cutting-Edge
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"> Technologies</span>
+            Modern
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"> Technology</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            We use the latest and most powerful technologies to build scalable, performant, and future-ready solutions.
+            We use the best and latest tools to build websites that are fast, secure, and easy to use.
           </p>
         </div>
 
@@ -107,11 +107,11 @@ const TechStack = () => {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">15+</div>
-            <div className="text-gray-400 text-sm">Technologies</div>
+            <div className="text-gray-400 text-sm">Tools We Know</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2">99%</div>
-            <div className="text-gray-400 text-sm">Uptime</div>
+            <div className="text-gray-400 text-sm">Website Uptime</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">24/7</div>
@@ -119,7 +119,7 @@ const TechStack = () => {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">3x</div>
-            <div className="text-gray-400 text-sm">Faster</div>
+            <div className="text-gray-400 text-sm">Faster Loading</div>
           </div>
         </div>
       </div>

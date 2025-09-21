@@ -5,19 +5,19 @@ const FuturisticAbout = () => {
   const teamMembers = [
     {
       name: "Alex Chen",
-      role: "CEO & Full-Stack Developer",
+      role: "CEO & Lead Developer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
       color: "from-cyan-400 to-blue-500"
     },
     {
       name: "Sarah Kim",
-      role: "Creative Director",
+      role: "Creative Designer",
       image: "https://images.unsplash.com/photo-1494790108755-2616c768e9e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
       color: "from-purple-400 to-pink-500"
     },
     {
       name: "Marcus Rodriguez",
-      role: "Marketing Strategist",
+      role: "Marketing Expert",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       color: "from-green-400 to-emerald-500"
     }
@@ -26,35 +26,35 @@ const FuturisticAbout = () => {
   const values = [
     {
       icon: <Lightbulb className="h-8 w-8" />,
-      title: "Innovation First",
-      description: "We embrace cutting-edge technologies and creative solutions to stay ahead of the curve.",
+      title: "Creative Ideas",
+      description: "We love coming up with new and exciting ways to make your business stand out online.",
       color: "from-yellow-400 to-orange-500"
     },
     {
       icon: <Heart className="h-8 w-8" />,
-      title: "Client-Centric",
-      description: "Your success is our priority. We build lasting partnerships based on trust and results.",
+      title: "We Care About You",
+      description: "Your success is what matters most to us. We work hard to make sure you're happy with our work.",
       color: "from-red-400 to-pink-500"
     },
     {
       icon: <Star className="h-8 w-8" />,
-      title: "Excellence",
-      description: "We deliver nothing less than exceptional quality in every project we undertake.",
+      title: "Quality Work",
+      description: "We always do our best work and make sure everything we create looks great and works perfectly.",
       color: "from-purple-400 to-indigo-500"
     },
     {
       icon: <CheckCircle className="h-8 w-8" />,
-      title: "Reliability",
-      description: "Consistent delivery, transparent communication, and dependable support you can count on.",
+      title: "You Can Trust Us",
+      description: "We deliver on time, stay in touch throughout your project, and provide ongoing support.",
       color: "from-green-400 to-teal-500"
     }
   ];
 
   const achievements = [
-    { number: "200+", label: "Projects Completed", color: "text-cyan-400" },
+    { number: "200+", label: "Projects Finished", color: "text-cyan-400" },
     { number: "50+", label: "Happy Clients", color: "text-purple-400" },
-    { number: "5+", label: "Years Experience", color: "text-green-400" },
-    { number: "15+", label: "Technologies", color: "text-orange-400" }
+    { number: "5+", label: "Years in Business", color: "text-green-400" },
+    { number: "15+", label: "Tools We Use", color: "text-orange-400" }
   ];
 
   return (
@@ -74,13 +74,13 @@ const FuturisticAbout = () => {
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Meet The
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Future</span>
+            Meet Our
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Team</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            We are a forward-thinking digital agency that combines technical expertise with creative vision to deliver 
-            extraordinary digital experiences. Our mission is to transform businesses through innovative technology.
+            We're a friendly team of designers, developers, and marketers who love helping businesses grow online. 
+            Our goal is to make amazing websites that your customers will love.
           </p>
         </div>
 
@@ -91,21 +91,19 @@ const FuturisticAbout = () => {
               <div>
                 <h3 className="text-3xl font-bold text-white mb-6">Our Story</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Founded in 2019, SERANEX emerged from a vision to bridge the gap between cutting-edge technology 
-                  and exceptional user experiences. What started as a small team of passionate developers has grown 
-                  into a full-service digital agency.
+                  SERANEX started in 2019 when we saw that many businesses needed better websites but didn't know 
+                  where to start. We wanted to make it easy for any business to have a professional online presence.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Today, we specialize in web development, graphic design, and digital marketing, helping businesses 
-                  of all sizes achieve their digital transformation goals. We believe in the power of innovation 
-                  to create meaningful impact.
+                  Today, we help small and large businesses create websites, design graphics, and reach more customers 
+                  online. We believe every business deserves to succeed in the digital world.
                 </p>
               </div>
               <div className="relative">
                 <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-cyan-400/20">
                   <div className="text-center">
                     <Zap className="h-16 w-16 text-cyan-400 mx-auto mb-4" />
-                    <p className="text-cyan-300 font-medium">Innovation in Motion</p>
+                    <p className="text-cyan-300 font-medium">Always Moving Forward</p>
                   </div>
                 </div>
               </div>
@@ -116,7 +114,7 @@ const FuturisticAbout = () => {
         {/* Team Section */}
         <div className="mb-20">
           <h3 className="text-4xl font-bold text-center text-white mb-12">
-            Meet Our <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Team</span>
+            Our <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Team</span>
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -158,7 +156,7 @@ const FuturisticAbout = () => {
         {/* Values Section */}
         <div className="mb-20">
           <h3 className="text-4xl font-bold text-center text-white mb-12">
-            Our <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Values</span>
+            What We <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Believe</span>
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -199,7 +197,7 @@ const FuturisticAbout = () => {
         <div className="text-center">
           <div className="bg-black/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Achievements</span>
+              Our <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Numbers</span>
             </h3>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

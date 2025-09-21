@@ -30,32 +30,32 @@ const FuturisticContact = () => {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
       details: "hello@seranex.com",
-      description: "Get in touch for project inquiries",
+      description: "Send us a message anytime",
       color: "from-cyan-400 to-blue-500"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      description: "Speak directly with our team",
+      description: "Talk to us directly",
       color: "from-green-400 to-emerald-500"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
       details: "San Francisco, CA",
-      description: "Come to our innovation hub",
+      description: "Come see us in person",
       color: "from-purple-400 to-pink-500"
     }
   ];
 
   const services = [
-    "Web Development",
+    "Website Building",
     "Mobile Apps",
     "Graphic Design",
     "Digital Marketing",
-    "E-Commerce",
-    "Cloud Solutions"
+    "Online Stores",
+    "Cloud Storage"
   ];
 
   return (
@@ -76,12 +76,12 @@ const FuturisticContact = () => {
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Let's Build
+            Let's Work
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Together</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your digital presence? Let's discuss your project and create something extraordinary.
+            Ready to grow your business online? Let's talk about your project and create something amazing together.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const FuturisticContact = () => {
                     <Input
                       type="text"
                       name="subject"
-                      placeholder="Project Subject"
+                      placeholder="What kind of project do you need?"
                       value={formData.subject}
                       onChange={handleChange}
                       className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
@@ -139,7 +139,7 @@ const FuturisticContact = () => {
                   <div className="relative">
                     <Textarea
                       name="message"
-                      placeholder="Tell us about your project..."
+                      placeholder="Tell us more about your project..."
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
@@ -203,7 +203,7 @@ const FuturisticContact = () => {
             <div className="bg-black/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6">
               <h4 className="text-xl font-bold text-white mb-4 flex items-center">
                 <Sparkles className="h-5 w-5 text-purple-400 mr-2" />
-                Our Services
+                What We Do
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 {services.map((service, index) => (
@@ -224,23 +224,23 @@ const FuturisticContact = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Start Your Digital Journey?
+              Ready to Get Started?
             </h3>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Join over 200+ satisfied clients who have transformed their businesses with SERANEX. 
-              Let's create something amazing together.
+              Join over 200+ happy clients who have grown their businesses with SERANEX. 
+              Let's make something great together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:scale-105 transition-all duration-300"
               >
-                Schedule Free Consultation
+                Get Free Quote
               </Button>
               <Button 
                 variant="outline"
                 className="border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 px-8 py-3 rounded-lg hover:scale-105 transition-all duration-300"
               >
-                View Our Portfolio
+                See Our Work
               </Button>
             </div>
           </div>

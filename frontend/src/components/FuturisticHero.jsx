@@ -123,7 +123,7 @@ const FuturisticHero = () => {
         {/* Glowing Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 mb-8 backdrop-blur-sm">
           <Sparkles className="h-4 w-4 text-cyan-400 mr-2 animate-pulse" />
-          <span className="text-sm text-cyan-300 font-medium">Crafting Digital Excellence</span>
+          <span className="text-sm text-cyan-300 font-medium">Building Great Websites</span>
         </div>
 
         {/* Main Heading */}
@@ -138,7 +138,7 @@ const FuturisticHero = () => {
 
         {/* Tagline with Typing Effect */}
         <div className="text-xl md:text-2xl text-gray-300 mb-6 font-mono">
-          <span className="text-cyan-400">&gt;</span> We Build Tomorrow's Digital Experiences
+          <span className="text-cyan-400">&gt;</span> We Create Amazing Digital Experiences
           <span className="text-cyan-400 animate-pulse">_</span>
         </div>
 
@@ -148,7 +148,7 @@ const FuturisticHero = () => {
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300 border border-cyan-400/20">
               <Code className="h-8 w-8 text-cyan-400" />
             </div>
-            <span className="text-xs text-gray-400 font-medium">Development</span>
+            <span className="text-xs text-gray-400 font-medium">Websites</span>
           </div>
           <div className="flex flex-col items-center group">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300 border border-purple-400/20">
@@ -166,8 +166,8 @@ const FuturisticHero = () => {
 
         {/* Description */}
         <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-          At SERANEX, we transform ideas into cutting-edge digital solutions. We specialize in web development, 
-          graphic design, and digital marketing that pushes the boundaries of innovation.
+          At SERANEX, we help businesses grow online. We build websites, create designs, 
+          and help you reach more customers through smart digital marketing.
         </p>
 
         {/* CTA Buttons */}
@@ -189,7 +189,7 @@ const FuturisticHero = () => {
             variant="outline" 
             className="border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm hover:scale-105 transition-all duration-300"
           >
-            View Our Work
+            See Our Work
           </Button>
         </div>
 
@@ -197,7 +197,7 @@ const FuturisticHero = () => {
         <div className="flex justify-center space-x-12 mt-16">
           <div className="text-center">
             <div className="text-3xl font-bold text-cyan-400 mb-1">200+</div>
-            <div className="text-sm text-gray-400">Projects</div>
+            <div className="text-sm text-gray-400">Projects Done</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-400 mb-1">5+</div>
@@ -205,7 +205,7 @@ const FuturisticHero = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-green-400 mb-1">98%</div>
-            <div className="text-sm text-gray-400">Success Rate</div>
+            <div className="text-sm text-gray-400">Happy Clients</div>
           </div>
         </div>
       </div>

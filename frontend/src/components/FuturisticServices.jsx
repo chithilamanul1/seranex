@@ -6,9 +6,9 @@ const FuturisticServices = () => {
   const services = [
     {
       icon: <Code2 className="h-8 w-8" />,
-      title: "Web Development",
-      description: "Custom websites and web applications built with cutting-edge technologies for optimal performance.",
-      features: ["React & Next.js", "Node.js & Python", "Cloud Deployment", "API Integration"],
+      title: "Website Building",
+      description: "We build fast, beautiful websites that work perfectly on phones, tablets, and computers.",
+      features: ["Mobile-Friendly", "Fast Loading", "Easy to Update", "Works Everywhere"],
       color: "from-cyan-400 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10",
       borderColor: "border-cyan-400/30"
@@ -16,8 +16,8 @@ const FuturisticServices = () => {
     {
       icon: <Palette className="h-8 w-8" />,
       title: "Graphic Design",
-      description: "Stunning visual identities, logos, and brand materials that make your business stand out.",
-      features: ["Brand Identity", "UI/UX Design", "Print Design", "Digital Assets"],
+      description: "Beautiful logos, brand designs, and graphics that make your business look professional.",
+      features: ["Logo Design", "Business Cards", "Brochures", "Social Media Graphics"],
       color: "from-purple-400 to-pink-500",
       bgColor: "from-purple-500/10 to-pink-500/10",
       borderColor: "border-purple-400/30"
@@ -25,8 +25,8 @@ const FuturisticServices = () => {
     {
       icon: <TrendingUp className="h-8 w-8" />,
       title: "Digital Marketing",
-      description: "Data-driven marketing strategies that boost your online presence and drive conversions.",
-      features: ["SEO Optimization", "Social Media", "Content Strategy", "Analytics"],
+      description: "Help more people find your business online and turn visitors into customers.",
+      features: ["Google Ads", "Social Media", "Email Marketing", "SEO Optimization"],
       color: "from-green-400 to-emerald-500",
       bgColor: "from-green-500/10 to-emerald-500/10",
       borderColor: "border-green-400/30"
@@ -34,17 +34,17 @@ const FuturisticServices = () => {
     {
       icon: <Smartphone className="h-8 w-8" />,
       title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-      features: ["iOS & Android", "React Native", "Flutter", "App Store Deploy"],
+      description: "Custom mobile apps for iPhone and Android that your customers will love to use.",
+      features: ["iPhone Apps", "Android Apps", "Easy to Use", "App Store Ready"],
       color: "from-orange-400 to-red-500",
       bgColor: "from-orange-500/10 to-red-500/10",
       borderColor: "border-orange-400/30"
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "E-Commerce",
-      description: "Powerful online stores with payment integration and inventory management systems.",
-      features: ["Shopify & WooCommerce", "Payment Gateways", "Inventory System", "Analytics"],
+      title: "Online Stores",
+      description: "Complete online shops where you can sell products and accept payments easily.",
+      features: ["Payment Processing", "Inventory Management", "Order Tracking", "Customer Support"],
       color: "from-blue-400 to-indigo-500",
       bgColor: "from-blue-500/10 to-indigo-500/10",
       borderColor: "border-blue-400/30"
@@ -52,8 +52,8 @@ const FuturisticServices = () => {
     {
       icon: <Database className="h-8 w-8" />,
       title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and DevOps solutions for enterprise-level applications.",
-      features: ["AWS & Azure", "Docker & K8s", "CI/CD Pipeline", "Monitoring"],
+      description: "Secure online storage and backup systems to keep your business data safe.",
+      features: ["Data Backup", "File Storage", "Team Collaboration", "24/7 Security"],
       color: "from-teal-400 to-cyan-500",
       bgColor: "from-teal-500/10 to-cyan-500/10",
       borderColor: "border-teal-400/30"
@@ -74,16 +74,16 @@ const FuturisticServices = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 mb-6 backdrop-blur-sm">
             <Zap className="h-4 w-4 text-cyan-400 mr-2 animate-pulse" />
-            <span className="text-sm text-cyan-300 font-medium">Our Expertise</span>
+            <span className="text-sm text-cyan-300 font-medium">What We Do</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Digital
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Solutions</span>
+            Our
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Services</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            We deliver comprehensive digital services that transform your business and drive growth in the digital age.
+            We offer everything you need to grow your business online and reach more customers.
           </p>
         </div>
 
@@ -146,7 +146,7 @@ const FuturisticServices = () => {
             className="relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-12 py-4 rounded-lg overflow-hidden group border-0 hover:scale-105 transition-all duration-300"
           >
             <span className="relative z-10 flex items-center text-lg">
-              View All Services
+              See All Services
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

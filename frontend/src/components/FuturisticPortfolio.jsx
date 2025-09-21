@@ -6,66 +6,66 @@ const FuturisticPortfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "QuantumTech Platform",
-      category: "Web Application",
-      description: "A cutting-edge SaaS platform for quantum computing simulations with real-time analytics and AI-powered insights.",
+      title: "TechStart Website",
+      category: "Business Website",
+      description: "A modern website for a technology startup with easy navigation and mobile-friendly design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
-      technologies: ["React", "Node.js", "AI/ML", "WebGL"],
+      technologies: ["Website Design", "Mobile-Friendly", "Fast Loading", "SEO Ready"],
       color: "from-cyan-400 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10",
       icon: <Monitor className="h-6 w-6" />
     },
     {
       id: 2,
-      title: "NeoBank Mobile",
+      title: "FoodDelivery App",
       category: "Mobile App",
-      description: "Revolutionary banking app with biometric security, AI budgeting, and cryptocurrency integration.",
+      description: "Easy-to-use food delivery app with online ordering and real-time tracking features.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["React Native", "Blockchain", "AI", "Biometrics"],
+      technologies: ["iPhone App", "Android App", "Online Payments", "GPS Tracking"],
       color: "from-purple-400 to-pink-500",
       bgColor: "from-purple-500/10 to-pink-500/10",
       icon: <Smartphone className="h-6 w-6" />
     },
     {
       id: 3,
-      title: "MetaVerse Commerce",
-      category: "E-Commerce",
-      description: "Next-generation e-commerce platform with VR showrooms, AR try-ons, and NFT marketplace integration.",
+      title: "Fashion Store Online",
+      category: "Online Shop",
+      description: "Beautiful online clothing store with easy shopping cart and secure payment system.",
       image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Next.js", "VR", "AR", "NFT", "Web3"],
+      technologies: ["Online Store", "Payment System", "Inventory", "Customer Reviews"],
       color: "from-green-400 to-emerald-500",
       bgColor: "from-green-500/10 to-emerald-500/10",
       icon: <Globe className="h-6 w-6" />
     },
     {
       id: 4,
-      title: "SpaceX Dashboard",
-      category: "Data Visualization",
-      description: "Mission control dashboard for space operations with real-time telemetry and predictive analytics.",
+      title: "Fitness Tracker",
+      category: "Health App",
+      description: "Personal fitness tracking app with workout plans and progress monitoring features.",
       image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["D3.js", "WebSocket", "Python", "TensorFlow"],
+      technologies: ["Workout Plans", "Progress Tracking", "Social Features", "Health Data"],
       color: "from-orange-400 to-red-500",
       bgColor: "from-orange-500/10 to-red-500/10",
       icon: <Rocket className="h-6 w-6" />
     },
     {
       id: 5,
-      title: "Neural Network IDE",
-      category: "Developer Tools",
-      description: "Advanced IDE for machine learning with visual neural network designer and cloud GPU integration.",
+      title: "Learning Platform",
+      category: "Education Website",
+      description: "Online learning platform where students can take courses and track their progress.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Electron", "TensorFlow", "CUDA", "Docker"],
+      technologies: ["Video Lessons", "Progress Tests", "Certificates", "Student Dashboard"],
       color: "from-indigo-400 to-purple-500",
       bgColor: "from-indigo-500/10 to-purple-500/10",
       icon: <Monitor className="h-6 w-6" />
     },
     {
       id: 6,
-      title: "CyberSec Platform",
-      category: "Security",
-      description: "AI-powered cybersecurity platform with threat detection, automated response, and blockchain logging.",
+      title: "Restaurant Website",
+      category: "Local Business",
+      description: "Professional website for a local restaurant with online menu and reservation system.",
       image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-      technologies: ["Python", "AI/ML", "Blockchain", "Kubernetes"],
+      technologies: ["Online Menu", "Table Booking", "Location Map", "Customer Reviews"],
       color: "from-red-400 to-pink-500",
       bgColor: "from-red-500/10 to-pink-500/10",
       icon: <Globe className="h-6 w-6" />
@@ -86,16 +86,16 @@ const FuturisticPortfolio = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/20 mb-6 backdrop-blur-sm">
             <Rocket className="h-4 w-4 text-purple-400 mr-2 animate-pulse" />
-            <span className="text-sm text-purple-300 font-medium">Our Portfolio</span>
+            <span className="text-sm text-purple-300 font-medium">Our Work</span>
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Featured
+            Recent
             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent"> Projects</span>
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Explore our cutting-edge projects that showcase the future of digital innovation and technology.
+            Check out some of the amazing websites and apps we've built for our clients.
           </p>
         </div>
 
@@ -180,7 +180,7 @@ const FuturisticPortfolio = () => {
             className="relative bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-12 py-4 rounded-lg overflow-hidden group border-0 hover:scale-105 transition-all duration-300"
           >
             <span className="relative z-10 flex items-center text-lg">
-              View All Projects
+              See All Projects
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
