@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, Phone, MapPin, Send, MessageCircle, Rocket, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Rocket, Sparkles, CheckCircle } from 'lucide-react';
 
 const FuturisticContact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,8 @@ const FuturisticContact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -19,10 +21,26 @@ const FuturisticContact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    }, 3000);
   };
 
   const contactInfo = [
@@ -31,21 +49,24 @@ const FuturisticContact = () => {
       title: "Email Us",
       details: "hello@seranex.com",
       description: "Send us a message anytime",
-      color: "from-cyan-400 to-blue-500"
+      color: "from-cyan-400 to-blue-500",
+      action: () => window.open('mailto:hello@seranex.com')
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
       details: "+1 (555) 123-4567",
       description: "Talk to us directly",
-      color: "from-green-400 to-emerald-500"
+      color: "from-green-400 to-emerald-500",
+      action: () => window.open('tel:+15551234567')
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
       details: "San Francisco, CA",
       description: "Come see us in person",
-      color: "from-purple-400 to-pink-500"
+      color: "from-purple-400 to-pink-500",
+      action: () => window.open('https://maps.google.com/maps?q=San+Francisco,+CA')
     }
   ];
 
@@ -57,6 +78,16 @@ const FuturisticContact = () => {
     "Online Stores",
     "Cloud Storage"
   ];
+
+  const smoothScroll = (targetId) => {
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
@@ -98,68 +129,77 @@ const FuturisticContact = () => {
                   Start Your Project
                 </h3>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {isSubmitted ? (
+                  <div className="text-center py-12">
+                    <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                    <h4 className="text-2xl font-bold text-white mb-2">Message Sent!</h4>
+                    <p className="text-gray-400">We'll get back to you within 24 hours.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div className="relative">
+                        <Input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
+                          required
+                        />
+                      </div>
+                      <div className="relative">
+                        <Input
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
+                          required
+                        />
+                      </div>
+                    </div>
+
                     <div className="relative">
                       <Input
                         type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={formData.name}
+                        name="subject"
+                        placeholder="What kind of project do you need?"
+                        value={formData.subject}
                         onChange={handleChange}
                         className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
                         required
                       />
                     </div>
+
                     <div className="relative">
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={formData.email}
+                      <Textarea
+                        name="message"
+                        placeholder="Tell us more about your project..."
+                        value={formData.message}
                         onChange={handleChange}
-                        className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
+                        rows={6}
+                        className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg resize-none"
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="relative">
-                    <Input
-                      type="text"
-                      name="subject"
-                      placeholder="What kind of project do you need?"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg h-12"
-                      required
-                    />
-                  </div>
-
-                  <div className="relative">
-                    <Textarea
-                      name="message"
-                      placeholder="Tell us more about your project..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={6}
-                      className="bg-gray-800/50 border-gray-600/50 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400/20 rounded-lg resize-none"
-                      required
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit"
-                    className="w-full relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 rounded-lg overflow-hidden group border-0 hover:scale-105 transition-all duration-300"
-                  >
-                    <span className="relative z-10 flex items-center justify-center">
-                      <Send className="h-5 w-5 mr-2" />
-                      Send Message
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
-                  </Button>
-                </form>
+                    <Button 
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 rounded-lg overflow-hidden group border-0 hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    >
+                      <span className="relative z-10 flex items-center justify-center">
+                        <Send className={`h-5 w-5 mr-2 ${isSubmitting ? 'animate-pulse' : ''}`} />
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-30 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    </Button>
+                  </form>
+                )}
               </div>
             </div>
           </div>
@@ -171,7 +211,8 @@ const FuturisticContact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="relative group"
+                  className="relative group cursor-pointer"
+                  onClick={info.action}
                 >
                   <div className="bg-black/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:bg-black/60 transition-all duration-300 transform hover:scale-105">
                     {/* Glow Effect */}
@@ -209,7 +250,8 @@ const FuturisticContact = () => {
                 {services.map((service, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
+                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group cursor-pointer"
+                    onClick={() => smoothScroll('#services')}
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
                     <span className="text-sm font-medium">{service}</span>
@@ -232,11 +274,16 @@ const FuturisticContact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                onClick={() => {
+                  const form = document.querySelector('#contact form');
+                  if (form) form.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:scale-105 transition-all duration-300"
               >
                 Get Free Quote
               </Button>
               <Button 
+                onClick={() => smoothScroll('#portfolio')}
                 variant="outline"
                 className="border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 px-8 py-3 rounded-lg hover:scale-105 transition-all duration-300"
               >

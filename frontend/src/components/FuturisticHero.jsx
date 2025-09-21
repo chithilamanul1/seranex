@@ -90,6 +90,24 @@ const FuturisticHero = () => {
     };
   }, []);
 
+  const smoothScroll = (targetId) => {
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  const handleStartProject = () => {
+    smoothScroll('#contact');
+  };
+
+  const handleViewWork = () => {
+    smoothScroll('#portfolio');
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-blue-900">
       {/* Animated Background Canvas */}
@@ -144,19 +162,19 @@ const FuturisticHero = () => {
 
         {/* Services Icons */}
         <div className="flex justify-center space-x-8 mb-12">
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group cursor-pointer" onClick={() => smoothScroll('#services')}>
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300 border border-cyan-400/20">
               <Code className="h-8 w-8 text-cyan-400" />
             </div>
             <span className="text-xs text-gray-400 font-medium">Websites</span>
           </div>
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group cursor-pointer" onClick={() => smoothScroll('#services')}>
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300 border border-purple-400/20">
               <Palette className="h-8 w-8 text-purple-400" />
             </div>
             <span className="text-xs text-gray-400 font-medium">Design</span>
           </div>
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group cursor-pointer" onClick={() => smoothScroll('#services')}>
             <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300 border border-green-400/20">
               <TrendingUp className="h-8 w-8 text-green-400" />
             </div>
@@ -173,6 +191,7 @@ const FuturisticHero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button 
+            onClick={handleStartProject}
             size="lg" 
             className="relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-lg overflow-hidden group border-0 hover:scale-105 transition-all duration-300"
           >
@@ -185,6 +204,7 @@ const FuturisticHero = () => {
           </Button>
           
           <Button 
+            onClick={handleViewWork}
             size="lg" 
             variant="outline" 
             className="border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold px-8 py-4 rounded-lg backdrop-blur-sm hover:scale-105 transition-all duration-300"
@@ -211,7 +231,7 @@ const FuturisticHero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={() => smoothScroll('#services')}>
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
         </div>
